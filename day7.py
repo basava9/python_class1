@@ -5,7 +5,10 @@
 correct_password="admin123"
 for attempt in range(1,4):
     password = input("enter your password:")
-
 if password==correct_password:
     print("login successful")
-    
+    break
+else:
+    print("Wrong password")
+    if attempt==3:
+        print("account locked")
